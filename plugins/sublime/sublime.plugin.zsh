@@ -35,6 +35,15 @@ elif  [[ $('uname') == 'Darwin' ]]; then
             break
         fi
     done
+
+elif [[ $(uname -o) == 'Cygwin' ]]; then
+    if [ -f '/cygdrive/c/Program\ Files/Sublime\ Text\ 2/sublime_text.exe' ]; then
+        alias st='/cygdrive/c/Program\ Files/Sublime\ Text\ 2/sublime_text.exe'
+    fi
+
+    if [ -f '/cygdrive/c/Program\ Files/Sublime\ Text\ 3/sublime_text.exe' ]; then
+        alias st='/cygdrive/c/Program\ Files/Sublime\ Text\ 3/sublime_text.exe'
+    fi
 fi
 
 alias stt='st .'
